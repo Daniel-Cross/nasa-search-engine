@@ -1,0 +1,23 @@
+.Search form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Search form input {
+    padding: 10px 50px;
+    width: 60%;
+    font-size: 25px;
+}
+
+.Search .checkboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.Search .checkboxes input {
+    transform: scale(1);
+}

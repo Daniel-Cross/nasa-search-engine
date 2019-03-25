@@ -1,18 +1,49 @@
 import React, { Component } from 'react';
+import Search from './components/search';
+
 import './App.css';
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			search: '',
+			images: false,
+			audio: false,
+		};
+	}
+
+	handleChange = (e) => {
+		this.setState({
+			search: e.target.value,
+		});
+	};
+
+	handleImages = () => {
+		this.setState({
+			images: !this.state.images,
+		});
+	};
+
+	handleAudio = () => {
+		this.setState({
+			audio: !this.state.audio,
+		});
+	};
+
 	render() {
+		const { search, images, audio } = this.state;
+
 		return (
 			<div className="App">
-				<header className="App-header">
-					<p>
-						Edit <code> src / App.js </code> and save to reload.
-					</p>
-					<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-						Learn React
-					</a>
-				</header>
+				<Search
+					search={search}
+					handleChange={this.handleChange}
+					handleImages={this.handleImages}
+					handleAudio={this.handleAudio}
+					images={images}
+					audio={audio}
+				/>
 			</div>
 		);
 	}
