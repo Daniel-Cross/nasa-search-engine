@@ -6,9 +6,11 @@ const Search = (props) => {
 	return (
 		<div className="Search">
 			<h1 className="title">NASA Search</h1>
-			<form action="submit">
-				<input type="text" placeholder="Search..." onChange={props.handleChange} />
+			<form action="submit" onSubmit={props.handleSubmit}>
+				<input type="text" placeholder="The Moon..." onChange={props.handleChange} />
+				<button>Search</button>
 			</form>
+
 			<div className="checkboxes">
 				<label htmlFor="images">
 					<input type="checkbox" images={props.images} onChange={props.handleImages} />Images

@@ -21,3 +21,10 @@
 .Search .checkboxes input {
     transform: scale(1);
 }
+
+button {
+    position: absolute;
+    top: 200px;
+    padding: 20px 70px;
+    border-radius: 4px;
+}

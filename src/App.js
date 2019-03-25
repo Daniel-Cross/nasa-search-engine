@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './components/search';
+import getData from './services/getData';
 
 import './App.css';
 
@@ -10,6 +11,7 @@ class App extends Component {
 			search: '',
 			images: false,
 			audio: false,
+			results: [],
 		};
 	}
 
@@ -31,6 +33,15 @@ class App extends Component {
 		});
 	};
 
+	handleSubmit = (e) => {
+		e.preventDefault();
+
+		getData(this.state.search).then((data) => {
+			console.log(data);
+			this.setState({ results: data });
+		});
+	};
+
 	render() {
 		const { search, images, audio } = this.state;
 
@@ -41,6 +52,7 @@ class App extends Component {
 					handleChange={this.handleChange}
 					handleImages={this.handleImages}
 					handleAudio={this.handleAudio}
+					handleSubmit={this.handleSubmit}
 					images={images}
 					audio={audio}
 				/>
