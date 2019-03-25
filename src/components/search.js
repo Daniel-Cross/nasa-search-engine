@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/search.css';
 
 const Search = (props) => {
@@ -18,6 +19,14 @@ const Search = (props) => {
 			</div>
 		</div>
 	);
+};
+
+Search.protoTypes = {
+	handleChange: PropTypes.func.isRequired,
+	handleImages: PropTypes.func.isRequired,
+	handleAudio: PropTypes.func.isRequired,
+	images: PropTypes.bool.isRequired,
+	audio: PropTypes.bool.isRequired,
 };
 
 export default Search;
