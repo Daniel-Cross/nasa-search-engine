@@ -1,0 +1,10 @@
+#Results {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.images {
+  height: 440px;
+  width: 640px;
+}
