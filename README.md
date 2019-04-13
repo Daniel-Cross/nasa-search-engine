@@ -1,8 +1,8 @@
 # Nasa Search
 
-![Screenshot](screenshot.png)
+![Screenshot](nasa.png)
 
-The application is deployed on Heroku [here](https://nasa-image-search.herokuapp.com/).
+The application is deployed on Heroku [here](https://nasa-search-image.herokuapp.com/).
 
 ## Install
 
